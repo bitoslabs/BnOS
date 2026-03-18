@@ -26,7 +26,11 @@ export default defineNuxtRouteMiddleware((to, _from) => {
   const nostrPubkey = useCookie("nostr-pubkey");
   const staffUserId = useCookie("staff-user-id"); // Staff login cookie
 
-  const isAuthenticated = !!nostrPubkey.value || !!staffUserId.value;
+  // localStorage nostrUser
+  const nostrUser = localStorage.getItem("nostrUser");
+
+  const isAuthenticated =
+    !!nostrPubkey.value || !!staffUserId.value || !!nostrUser;
 
   if (!isAuthenticated && to.meta.auth !== false) {
     // Redirect to sign in with return URL
