@@ -409,7 +409,7 @@ const handleCompanyCodeSubmit = async () => {
 
 // Check if already authenticated and check Nostr extension
 onMounted(async () => {
-  if (auth.isAuthenticated.value) {
+  if (auth.isAuthenticated.value || nostrUser.user.value) {
     router.push("/");
   }
 

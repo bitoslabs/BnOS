@@ -13,7 +13,6 @@ useHead({
 
 const auth = useAuth();
 const router = useRouter();
-
 // Form state
 const formData = ref({
   displayName: "",
@@ -176,7 +175,7 @@ const copyToClipboard = async (text: string, type: "npub" | "nsec") => {
 
 // Check if already authenticated
 onMounted(() => {
-  if (auth.isAuthenticated.value) {
+  if (auth.isAuthenticated.value || nostrUser.user.value) {
     router.push("/");
   }
 });
