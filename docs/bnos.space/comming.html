@@ -1,12 +1,13 @@
 <!doctype html>
-<html lang="lo">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BnOS - ລະບົບປະຕິບັດການທຸລະກິດ | ກຳລັງມາເຖິງ</title>
+    <title data-i18n="meta.title">BnOS - Business OS | Coming Soon</title>
     <meta
       name="description"
-      content="ລະບົບຈຸດຂາຍທີ່ໃຊ້ພະລັງງານ Lightning & ລະບົບປະຕິບັດການທຸລະກິດ. ສ້າງຂຶ້ນດ້ວຍໂປຣໂຕຄອນ Nostr. ເປີດຕົວ 1 ມັງກອນ 2026."
+      data-i18n="meta.description"
+      content="Lightning-Powered Point of Sale System & Business OS. Built on Nostr Protocol. Launching January 1, 2026."
     />
     <link
       rel="icon"
@@ -16,9 +17,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Lao:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&family=Noto+Sans+Lao:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/fonts/stylesheet.css" />
     <style>
       * {
         margin: 0;
@@ -30,7 +32,6 @@
       body {
         height: 100%;
         font-family:
-          "Noto Sans Lao",
           "Inter",
           -apple-system,
           BlinkMacSystemFont,
@@ -492,104 +493,59 @@
       }
 
       /* Responsive */
-      @media (max-width: 700px) {
-        .brand-name {
-          font-size: 40px;
-          letter-spacing: 4px;
-        }
-
-        .tagline {
-          font-size: 14px;
-          letter-spacing: 2px;
-        }
-
-        .countdown-item {
-          min-width: 70px;
-          padding: 18px 14px;
-        }
-
-        .countdown-value {
-          font-size: 34px;
-        }
-
-        .features {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-
-      @media (max-width: 400px) {
-        .countdown {
-          gap: 8px;
-        }
-
-        .countdown-item {
-          min-width: 60px;
-          padding: 14px 10px;
-        }
-
-        .countdown-value {
-          font-size: 28px;
-        }
-      }
+      @media (max-width: 700px) { ... }
     </style>
+    <script type="module" src="js/app.js"></script>
   </head>
   <body>
     <!-- Language Switcher -->
     <div class="lang-switcher">
-      <a href="../en/comming.html" class="lang-btn">EN</a>
-      <a href="../lo/comming.html" class="lang-btn active">ລາວ</a>
+      <a href="#" data-lang="en" class="lang-btn active">EN</a>
+      <a href="#" data-lang="lo" class="lang-btn">ລາວ</a>
+      <a href="#" data-lang="th" class="lang-btn">ไทย</a>
     </div>
 
     <div class="landing-container">
-      <!-- Stars -->
       <div class="stars" id="stars"></div>
-
-      <!-- Grid pattern -->
       <div class="grid-pattern"></div>
-
-      <!-- Orbs -->
       <div class="orb orb-1"></div>
       <div class="orb orb-2"></div>
 
       <div class="content">
-        <!-- Logo -->
         <div class="logo">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
           </svg>
         </div>
 
-        <!-- Brand -->
         <div class="brand">
           <h1 class="brand-name">BnOS</h1>
-          <p class="tagline">ລະບົບປະຕິບັດການທຸລະກິດ</p>
+          <p class="tagline">Business Operating System</p>
         </div>
 
-        <p class="subtitle">
-          ລະບົບຈຸດຂາຍທີ່ໃຊ້ພະລັງງານ Lightning ສ້າງຂຶ້ນດ້ວຍໂປຣໂຕຄອນ Nostr.
-          ແບບກະຈາຍສ່ວນ, ເປັນເຈົ້າຂອງເອງ ແລະ
-          ເອົາໃຈໃສ່ຄວາມເປັນສ່ວນຕົວສຳລັບທຸລະກິດທີ່ທັນສະໄໝ.
+        <p class="subtitle" data-i18n="hero.subtitle">
+          Lightning-powered Point of Sale built on Nostr Protocol.
+          Decentralized, sovereign, and privacy-first for modern businesses.
         </p>
 
-        <!-- Countdown -->
         <div class="countdown-section">
-          <p class="countdown-label">ກຳລັງເປີດຕົວໃນອີກ</p>
+          <p class="countdown-label" data-i18n="hero.launchLabel">Launching In</p>
           <div class="countdown" id="countdown">
             <div class="countdown-item">
               <span class="countdown-value" id="days">--</span>
-              <span class="countdown-unit">ມື້</span>
+              <span class="countdown-unit" data-i18n="hero.days">Days</span>
             </div>
             <div class="countdown-item">
               <span class="countdown-value" id="hours">--</span>
-              <span class="countdown-unit">ຊົ່ວໂມງ</span>
+              <span class="countdown-unit" data-i18n="hero.hours">Hours</span>
             </div>
             <div class="countdown-item">
               <span class="countdown-value" id="minutes">--</span>
-              <span class="countdown-unit">ນາທີ</span>
+              <span class="countdown-unit" data-i18n="hero.mins">Mins</span>
             </div>
             <div class="countdown-item">
               <span class="countdown-value" id="seconds">--</span>
-              <span class="countdown-unit">ວິນາທີ</span>
+              <span class="countdown-unit" data-i18n="hero.secs">Secs</span>
             </div>
           </div>
 
@@ -599,32 +555,30 @@
                 d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"
               />
             </svg>
-            <span>1 ມັງກອນ 2026 • 09:09 ໂມງເຊົ້າ</span>
+            <span data-i18n="hero.launchDate">January 1, 2026 • 09:09 AM</span>
           </div>
         </div>
 
-        <!-- Features -->
         <div class="features">
           <div class="feature">
             <div class="feature-icon">⚡</div>
-            <span class="feature-text">ການຈ່າຍເງິນ<br />Lightning</span>
+            <span class="feature-text" data-i18n="features.items.0.title">Lightning<br />Payments</span>
           </div>
           <div class="feature">
             <div class="feature-icon">🔐</div>
-            <span class="feature-text">ບໍ່ມີ<br />ການຝາກຮັກສາ</span>
+            <span class="feature-text" data-i18n="features.items.1.title">Non-<br />Custodial</span>
           </div>
           <div class="feature">
             <div class="feature-icon">🌐</div>
-            <span class="feature-text">ກະຈາຍສ່ວນ<br />ແບບເຕັມຮູບແບບ</span>
+            <span class="feature-text" data-i18n="features.items.2.title">Fully<br />Decentralized</span>
           </div>
           <div class="feature">
             <div class="feature-icon">📱</div>
-            <span class="feature-text">ໃຊ້ງານ<br />ແບບອອບໄລນ໌</span>
+            <span class="feature-text" data-i18n="features.items.3.title">Offline<br />First</span>
           </div>
         </div>
       </div>
 
-      <!-- Footer -->
       <div class="footer">
         <div class="footer-icons">
           <a
@@ -665,14 +619,11 @@
             </svg>
           </a>
         </div>
-        <p class="footer-text">
-          ຂັບເຄື່ອນໂດຍ Nostr ແລະ Bitcoin Lightning Network
-        </p>
+        <p class="footer-text">Powered by Nostr & Bitcoin Lightning Network</p>
       </div>
     </div>
 
     <script>
-      // Generate stars
       (function () {
         const starsContainer = document.getElementById("stars");
         const starCount = 80;
@@ -689,7 +640,6 @@
         }
       })();
 
-      // Countdown to January 1, 2026 09:09:00 AM (local time)
       (function () {
         const launchDate = new Date("2026-01-01T09:09:00").getTime();
 
@@ -703,7 +653,7 @@
             document.getElementById("minutes").textContent = "00";
             document.getElementById("seconds").textContent = "00";
             document.querySelector(".countdown-label").textContent =
-              "🚀 ເປີດຕົວແລ້ວ!";
+              "🚀 We Are Live!";
             return;
           }
 
